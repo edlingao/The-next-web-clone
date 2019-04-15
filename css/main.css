@@ -340,6 +340,15 @@
     grid-row-gap: 10px;
     padding: 20px 10px;
     border-bottom:1px solid #ffcdc4;
+    color: gray;
+}
+.payments-capital p:hover{
+    color: black;
+    cursor: pointer;
+}
+.payments-capital i{
+    color: black;
+
 }
 
 .link-fund{
@@ -366,8 +375,69 @@
 }
 
 
+.footer{
+    height: 20vh;
+    width: 100%;
+    
+}
+.footer .header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: #131313;
+    height: 75%;
+    width: 100%;
+}
 
+.footer img{
+    width: 50px;
+}
+.contact-links{
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+   
+}
+.contact-links a{
+    color: white;
+    font-size: 17px;
+    background: #333333;
+    border: 2px solid #333333;
+    border-radius: 50%;
+    padding: 10px;
+}
+.contact-links a:hover{
+    background: black;
+}
+.jobs{
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+}
+.jobs a{
+    color: rgb(156, 156, 156);
+    font-weight: 100;
+    text-decoration: none;
+    font-size: 12px;
 
+}
+.jobs a:hover{
+    color: white;
+}
+.disclaimer{
+    background: black;
+    height: 30%;
+    color: gray;
+    font-size: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.disclaimer .hearth{
+    color: red;
+
+}
 /* Media querys */
 
 @media (max-width: 1400px){
