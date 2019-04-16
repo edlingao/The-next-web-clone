@@ -4,10 +4,11 @@
     font-family: sans-serif;
 }
 body{
-    overflow-x: hidden;
+    overflow-x: hidden; 
 }
 .container {
     width: 100%;
+    
 
 }
 
@@ -102,6 +103,7 @@ body{
         "main-new main-new new2";
     grid-gap: 8px;
     height: 500px;
+
 }
 
 .apps {
@@ -137,7 +139,7 @@ body{
 }
 
 .main-gradient {
-    background: linear-gradient(to bottom right, rgba(237, 132, 132, .9) 60%, rgba(0, 0, 0, 1));
+    background: linear-gradient(to bottom right, rgba(254,66,9, .9)20% , rgba(0, 0, 0, 1));
 
     transition-duration: 2s;
 }
@@ -306,9 +308,7 @@ body{
 
 .links-title {
     display: flex;
-    justify-content: center;
     align-items: center;
-
     width: 100%;
     justify-content: space-around;
 }
@@ -514,6 +514,7 @@ body{
     height: 87vh;
     grid-gap: 2px;
 }
+
 .other-news-gradient .gradient-container{
     background: linear-gradient(to top, black, rgba(0,0,0,.1))
 }
@@ -610,17 +611,156 @@ body{
       font-size: .8rem
   }
 
+  .curse-details{
+      color: #f42;
+      text-decoration: none;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+  }
+  .curse-title{
+    grid-column: 1/4;
+    padding: 20px 0;
+    color: #f42;
+  }
+  .curses-container{
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      width: 60%;
+      margin: auto;
+      grid-gap: 40px 20px;
+  }
+  .curse-image-container{
+    background: url(../images/curses.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 20vh;
+    position: relative;
+  }
+  .discount-container{
+    position: absolute;
+
+    height: 80px;
+    width: 80px;
+    background: url(../images/discount.svg);
+    right: 0;
+  }
+  .discount-text{
+      position: relative;
+      font-size: 14px;
+      font-weight: bolder;
+      text-align: center;
+      transform: rotate(45deg);
+      left: 8px;
+      top: 25px;
+  }
+  .title-discount{
+      font-size: .5rem;
+      padding: 10px 0px;
+      
+  }
+  .title-discount .author{
+      color: black;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding-top: 10px;
+      font-size: 1rem;
+      font-weight: 500;
+
+  }
+  .title-discount .author .discount{
+    text-decoration: line-through;
+    font-size: .8rem;
+    color: rgba(0, 0, 0, .4);
+    font-weight: 100;
+    
+  }
+  
+
+
+
+
 /* Media querys */
 
-@media (max-width: 1400px) {
+@media (max-width: 1024px) {
+
+    .date{
+        display: none;
+    }
+    .author{
+        width: 100%;
+    }
+    .search{
+        display: none;
+    }
+    .nav-bar {
+        
+        grid-template-areas:
+            "nav nav nav nav";
+    }
+
     .latest-news {
-        margin: 0px;
+        width: 100%;
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas: "title title title";
+        height: 100vh;
     }
+    .funding:last-child{
+        display: none;
+    }
+    .latest-funding{
+        grid-template-columns: repeat(3,1fr);
+        width: 100%;
+        height: 50vh;
+        padding: 10px;
+    }
+    .links-title{
+        width: 60%;
+        padding: 0px;
+        justify-content: flex-start;
+        align-content: flex-end;
+    }
+
+    .latest-funding-header{
+        grid-template-rows: repeat(2,4vh);
+        grid-template-areas: 
+            "title title"
+            "links space";
+
+        
+    }
+
+    .other-news-container{
+        width: 100%;
+        grid-template-columns: repeat(2,1fr);
+
+
+    }
+    .other-news-header{
+        grid-template-rows: 50px 30vh 11vh;
+    }
+    .curse-title{
+        grid-area: title;
+    }
+    .curse-details{
+        grid-area: details;
+    }
+    .curses-container{
+        grid-template-columns: repeat(3,1fr);
+        grid-template-areas: 
+            "title title details";
+        width: 100%;
+    }
+
+
+
 }
 
 @media (max-width: 770px) {
+    .search{
+        display: initial;
+    }
     .main-news {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -715,6 +855,121 @@ body{
         width: 26%;
     }
 
+    .latest-funding{
+        grid-template-columns: 1fr;
+        height: 100vh;
+        grid-template-areas: "header";
+        
+    }
+    .funding .title{
+        text-align: start;
+        padding-left: 80px;
+    }
+    .found-funder{
+        width: 100%;
+        padding: 20px 80px;
+    }
+    .found-funder .author{
+        justify-content: flex-start;
+    }
+    .links-title{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .title-links{
+        border: 0px;
+    }
+    
+    .payments-capital{
+        grid-template-columns: 25px 1fr;
+    }
 
+    .other-news-container{
+        grid-template-columns: 1fr; 
+    }
+    .other-news{
+        height: 102vh;
+    }
+    .other-news-header{
+        grid-template-rows: 50px 60vh 10vh;
+    }
+    .other-news-gradient{
+        height: 100%;
+    }
+    .other-news-titles{
+        height: 15%;
+    }
+    .other-news-latest{
+        grid-template-columns: 4fr .6fr;
+    }
+    .curse-details{
+        align-items: flex-start;
 
+    }
+
+    .curses-container{
+
+        grid-template-columns: 1fr;
+
+        grid-template-rows: .2fr repeat(7,1fr);
+        grid-template-areas: 
+        "title details"
+        "curse1 curse1"
+        "curse2 curse2"
+        "curse3 curse3"
+        "curse4 curse4"
+        "curse5 curse5"
+        "curse6 curse6"
+        "curse7 curse7"
+        "curse8 curse8"
+    }
+    .curse1{
+        grid-area: curse1;
+    }
+    .curse2{
+        grid-area: curse2;
+    }
+    .curse3{
+        grid-area: curse3;
+    }
+    .curse4{
+        grid-area: curse4;
+    }
+    .curse5{
+        grid-area: curse5;
+    }
+    .curse6{
+        grid-area: curse6;
+    }
+    .curse7{
+        grid-area: curse7;
+    }
+    .curse8{
+        grid-area: curse8;
+    }
+    .curse-details{
+        justify-content: flex-start;
+    }
+
+    .curse{
+        display: grid;
+        grid-template-columns: 1fr 10fr;
+        
+
+    }
+    .title-discount{
+        padding-left: 10px;
+    }
+    .curse .author{
+        justify-content: space-around;
+        width: 10%;
+    }
+    .curse-image-container{
+       width: 75px;        
+       height: 75px;
+    }
+    .discount-container{
+        display: none;
+    }
 }
